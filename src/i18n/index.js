@@ -9,10 +9,10 @@ import DE from './de.json'
 
 const i18nMap = {
   'zh': ZHCN,
-  'zh-CN': ZHCN,
-  'zh-TW': ZHTW,
+  'zh-cn': ZHCN,
+  'zh-tw': ZHTW,
   'en': EN,
-  'es-ES': ES,
+  'es-es': ES,
   'fr': FR,
   'ru': RU,
   'de': DE,
@@ -20,7 +20,7 @@ const i18nMap = {
 
 export default function (language) {
   return new Polyglot({
-    phrases: i18nMap[language] || i18nMap.en,
+    phrases: i18nMap[language.toLowerCase()] || i18nMap.en,
     locale: language
   })
 }

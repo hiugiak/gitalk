@@ -10542,7 +10542,7 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function (language) {
   return new _polyglot2.default({
-    phrases: i18nMap[language] || i18nMap.en,
+    phrases: i18nMap[language.toLowerCase()] || i18nMap.en,
     locale: language
   });
 };
@@ -10583,10 +10583,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var i18nMap = {
   'zh': _zhCN2.default,
-  'zh-CN': _zhCN2.default,
-  'zh-TW': _zhTW2.default,
+  'zh-cn': _zhCN2.default,
+  'zh-tw': _zhTW2.default,
   'en': _en2.default,
-  'es-ES': _esES2.default,
+  'es-es': _esES2.default,
   'fr': _fr2.default,
   'ru': _ru2.default,
   'de': _de2.default
